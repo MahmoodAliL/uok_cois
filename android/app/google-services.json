@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "662967051039",
+    "project_id": "uok-cois",
+    "storage_bucket": "uok-cois.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662967051039:android:753b87e705692835a9062a",
+        "android_client_info": {
+          "package_name": "com.teaml.uok_cois"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "662967051039-1a2uombpfkhrr57n5vm96kounr2rvjo6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhs13e1hECw7JPiYBCmxtju_YDVoiLwuc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "662967051039-1a2uombpfkhrr57n5vm96kounr2rvjo6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
