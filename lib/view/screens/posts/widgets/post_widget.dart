@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:share/share.dart';
-import 'package:transparent_image/transparent_image.dart';
 import 'package:uok_cois/constants.dart';
 import 'package:uok_cois/models/post_response.dart';
-import 'package:uok_cois/view/components/post_img_widget.dart';
+import 'package:uok_cois/view/screens/posts/widgets/post_img_widget.dart';
 
 class PostWidget extends StatelessWidget {
   final Post post;
@@ -18,7 +18,7 @@ class PostWidget extends StatelessWidget {
       highlightColor: Colors.transparent,
       child: Ink(
         padding: const EdgeInsets.all(16),
-        child: post.type == PostType.News
+        child: post.type == PostType.news
             ? buildNewsLayout(context)
             : buildAdsLayout(context),
       ),
@@ -50,6 +50,7 @@ class PostWidget extends StatelessWidget {
 
   Widget buildNewsLayout(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         PostImage(
           postType: post.type,
@@ -66,7 +67,8 @@ class PostWidget extends StatelessWidget {
   Text buildPostTitle(BuildContext context) {
     return Text(
       post.title,
-      style: Theme.of(context).textTheme.headline6,
+      textAlign: TextAlign.start,
+      style: Theme.of(context).textTheme.headline6.copyWith(fontSize: 18.0),
     );
   }
 
@@ -74,9 +76,9 @@ class PostWidget extends StatelessWidget {
     return Row(
       children: [
         Icon(
-          post.type == PostType.News
-              ? Icons.article_rounded
-              : Icons.notifications,
+          post.type == PostType.news
+              ? MdiIcons.newspaperVariant
+              : MdiIcons.bullhorn,
           color: Colors.black54,
         ),
         const SizedBox(width: 8),
@@ -89,7 +91,7 @@ class PostWidget extends StatelessWidget {
           ),
           onPressed: () {
             Share.share(
-                '${post.link}\n تم المشاركة من تطبيق UOK COIS يمكن تحميل التطبيق من الرابط دناة',
+                '${post.link}\nتم المشاركة من تطبيق UOK COIS يمكن تحميل التطبيق من الرابط دناة : \n $downloadAppLink ',
                 subject: post.title);
           },
         ),
@@ -98,6 +100,6 @@ class PostWidget extends StatelessWidget {
   }
 
   String getPostTypeName() {
-    return post.type == PostType.News ? 'اخر الاخبار' : 'الاعلانات';
+    return post.type == PostType.news ? 'اخر الاخبار' : 'الاعلانات';
   }
 }

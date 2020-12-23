@@ -39,6 +39,8 @@ dependencies:
   firebase_core: ^0.5.3
   firebase_analytics: ^5.0.2
   firebase_messaging: ^7.0.3
+  material_design_icons_flutter: ^4.0.5755
+
 
 
 

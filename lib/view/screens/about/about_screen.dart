@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uok_cois/constants.dart';
-import 'package:uok_cois/view/components/my_app_icon.dart';
+import 'package:uok_cois/view/widgets/my_app_icon.dart';
 
 class AboutScreen extends StatelessWidget {
   @override
@@ -36,7 +36,7 @@ class AboutScreen extends StatelessWidget {
               flex: 8,
             ),
             Text(
-              'تم تطويره بواسطة محمود علي',
+              'تطوير محمود علي',
               style: Theme.of(context)
                   .textTheme
                   .subtitle1

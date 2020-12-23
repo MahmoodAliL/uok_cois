@@ -1,12 +1,11 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'dart:convert';
 
 import 'custom_exception.dart';
 
 class ApiHelper {
-  final String _baseUrl = 'http://cois.uokerbala.edu.iq/wp/wp-json/wp/v2/';
+  final String _baseUrl = 'https://cois.uokerbala.edu.iq/wp/wp-json/wp/v2/';
 
   Future<dynamic> get(url) async {
     var fullUrl = _baseUrl + url;
@@ -18,7 +17,6 @@ class ApiHelper {
     switch (response.statusCode) {
       case 200:
         var responseJson = json.decode(response.body);
-        print(responseJson);
         return responseJson;
 
       case 400:

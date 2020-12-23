@@ -7,7 +7,7 @@ class Helper {
     try {
       await launch(url,
           option: CustomTabsOption(
-              toolbarColor: Theme.of(context).primaryColor,
+              toolbarColor: Colors.white,
               enableDefaultShare: true,
               enableUrlBarHiding: true,
               showPageTitle: true));

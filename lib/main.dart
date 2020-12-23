@@ -1,7 +1,8 @@
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:uok_cois/view/screens/home_screen.dart';
+
+import 'file:///G:/Programming/Flutter/Projects/uok_cois/lib/view/screens/home/home_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,6 +13,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Colors.white,
+    ));
     return MaterialApp(
       title: 'UOK COIS',
       localizationsDelegates: [
@@ -26,7 +30,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: AppBarTheme(
             elevation: 1,
             color: Colors.white,
-            brightness: Brightness.dark,
+            brightness: Brightness.light,
             iconTheme: IconThemeData(color: Colors.black, opacity: 0.54)),
         scaffoldBackgroundColor: Colors.white,
         primarySwatch: Colors.green,

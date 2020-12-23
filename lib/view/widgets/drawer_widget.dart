@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:uok_cois/view/screens/about_screen.dart';
+
+import 'file:///G:/Programming/Flutter/Projects/uok_cois/lib/view/screens/about/about_screen.dart';
 
 import 'my_app_icon.dart';
 

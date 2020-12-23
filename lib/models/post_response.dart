@@ -36,7 +36,7 @@ class Post {
 
   static PostType _getPostTypeFromCategories(List<dynamic> json) {
     List<int> categories = json.cast<int>();
-    return categories.contains(adsCategoryId) ? PostType.Ads : PostType.News;
+    return categories.contains(adsCategoryId) ? PostType.ads : PostType.news;
   }
 
   static String _getPostDateOnlyFromPostDateTime(String date) {

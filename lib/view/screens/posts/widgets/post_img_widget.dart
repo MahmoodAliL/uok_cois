@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:transparent_image/transparent_image.dart';
 
-import '../../constants.dart';
+import '../../../../constants.dart';
 
 class PostImage extends StatelessWidget {
-  static const _kNewsImgHeight = 250.0;
+  static const _kNewsImgHeight = 230.0;
   static const _kNewsImgWidth = double.infinity;
   static const _kAdsImgHeight = 100.0;
   static const _kAdsImgWidth = 100.0;
@@ -17,8 +17,8 @@ class PostImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: postType == PostType.News ? _kNewsImgHeight : _kAdsImgHeight,
-      width: postType == PostType.News ? _kNewsImgWidth : _kAdsImgWidth,
+      height: postType == PostType.news ? _kNewsImgHeight : _kAdsImgHeight,
+      width: postType == PostType.news ? _kNewsImgWidth : _kAdsImgWidth,
       padding: EdgeInsets.all(2),
       decoration: BoxDecoration(
         color: Colors.grey.shade200,
